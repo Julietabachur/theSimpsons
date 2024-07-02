@@ -59,5 +59,7 @@ export const obtenerCitaDeLaAPI =
 
 export const obtenerCitaDelEstado = (state: RootState) => state.cita.data;
 export const obtenerEstadoDelPedido = (state: RootState) => state.cita.estado;
+export const obtenerImgDelPedido = (state: RootState) =>
+  state.cita.data?.imagen;
 
 export default citaSlice.reducer;

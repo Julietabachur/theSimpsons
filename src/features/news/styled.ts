@@ -17,6 +17,10 @@ export const ContenedorNoticias = styled.div`
   width: 100%;
   height: 100%;
   padding: 0 1rem;
+
+  @media (max-width: 480px) {
+    padding: 0px;
+  }
 `;
 
 export const TituloNoticias = styled.h2`
@@ -30,6 +34,12 @@ export const TituloNoticias = styled.h2`
     -2px 0px 0 #000000, 0px -2px 0 #000000;
 
   letter-spacing: 0.1rem;
+
+  @media (max-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2rem;
+  }
 `;
 
 export const ListaNoticias = styled.div`
@@ -58,7 +68,7 @@ export const TarjetaNoticia = styled.div`
   position: relative;
 
   &:hover {
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 20px #fff;
     cursor: pointer;
   }
 `;
@@ -97,22 +107,20 @@ export const FechaTarjetaNoticia = styled.p`
 export const BotonLectura = styled.button<BtnProps>`
   width: 100%;
   border: none;
-  color: #fff;
+  background-color: #fdd835;
+  color: #000;
   font-size: 1rem;
   font-weight: bold;
-  background-color: blue;
   margin: 0;
   padding: 1rem 0;
   cursor: pointer;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background-color: #fdd835;
-    color: #000;
-  }
-
+  // transition: all 0.3s ease;
   position: absolute;
   bottom: 0px;
+
+  @media (max-width: 480px) {
+    padding: 0.5rem 0;
+  }
 `;
 
 export const ContenedorModal = styled.div`
